@@ -34,6 +34,79 @@
 //   alert( i );
 //   i++;
 // }
-function showMessage() {
-    alert( 'Hello everyone!' );
+// function showMessage() {
+//     alert( 'Hello everyone!' );
+//   }
+// showMessage();
+// showMessage();
+
+// function showMessage(from, text) {
+//     if (text === undefined) {
+//       text = 'no text given';
+//     }
+  
+//     alert( from + ": " + text );
+//   }
+//   showMessage("Hello");
+
+//   function showMessage(from, text) {
+//     // if text is falsy then text gets the "default" value
+//     text = text || 'no text given';
+//     alert( from + ": " + text );
+//   }
+// showMessage("Hello Again")
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes()
+//     else no();
+//   }
+  
+//   ask(
+//     "Do you agree?",
+//     function() { alert("You agreed."); },
+//     function() { alert("You canceled the execution."); }
+//   );
+
+// let age = prompt("what is your age?", 18);
+
+// let welcome = (age < 18) ?
+// function() { alert("Hello!");} :
+// function() { alert("Greetings!");} ;
+
+// welcome();
+
+// let sum = function(a, b) {
+//   let result = a + b;
+
+//   return result;
+// }
+// alert(result);
+// function hello(name) {
+//   let phrase = `Hello, ${name}!`;
+
+//   debugger;  // <-- the debugger stops here
+
+//   say(phrase);
+// }
+// for (let i = 0; i < 5; i++) {
+//   console.log("value", i);
+// }
+function pow(x, n) {
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x;
   }
+
+  return result;
+}
+
+let x = prompt("x?", "");
+let n = prompt("n?", "");
+
+if (n < 0) {
+  alert(`Power ${n} is not supported,
+    please enter an integer number greater than zero`);
+} else {
+  alert( pow(x, n) );
+}
